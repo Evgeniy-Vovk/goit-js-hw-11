@@ -26,7 +26,7 @@ searchForm.addEventListener('submit', async event => {
   }
 
   clearGallery();
-  showLoader(); // ДОДАНО, щоб показати лоадер під час запиту
+  showLoader();
 
   try {
     const data = await getImagesByQuery(query);
@@ -55,7 +55,7 @@ searchForm.addEventListener('submit', async event => {
       position: 'topRight',
     });
   } finally {
-    hideLoader(); // Завжди ховаємо лоадер
+    hideLoader();
     searchForm.reset();
   }
 });
